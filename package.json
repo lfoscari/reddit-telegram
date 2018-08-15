@@ -1,0 +1,16 @@
+{
+  "name": "wtfstock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luigi Foscari",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nraw": "^0.2.5",
+    "telegraf": "^3.22.2"
+  }
+}

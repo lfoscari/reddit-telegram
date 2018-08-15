@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>wtfstockphotos</title>
+  </head>
+  <body>
+
+    <style media="screen">
+      img {
+        display: block;
+        max-height: 90vh;
+      }
+    </style>
+
+    <button onClick="randomPost()" name="button">⟲</button>
+
+    <p></p>
+
+    <script src="../node_modules/reddit.js/reddit.js"></script>
+    <script type="text/javascript">
+
+      const p = document.querySelector("p")
+      const img = new Image();
+      img.onerror = () => randomPost();
+
+      randomPost()
+
+      function randomPost (res) {
+        reddit.random("wtfstockphotos").fetch(function(res) {
+          var data = res[0].data.children[0].data
+          console.log(data);
+
+          if(data.url == undefined) randomPost()
+
+          p.innerHTML = data.title + "<br>" + data.author;
+
+          img.src = data.url
+          p.appendChild(img)
+
+        })
+      }
+
+    </script>
+  </body>
+</html>
