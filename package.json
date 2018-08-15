@@ -9,7 +9,6 @@
   "author": "Luigi Foscari",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
     "nraw": "^0.2.5",
     "telegraf": "^3.22.2"
   }
