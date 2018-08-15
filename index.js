@@ -2,11 +2,12 @@
 
 var subreddit = "wtfstockphotos";
 var postEveryHours = 24; // one post per day
+var botToken = process.env.BOT_TOKEN;
 
 var Telegraf = require('telegraf');
 var r = require("nraw");
 
-var bot = new Telegraf('681501793:AAE5KzNwHPHqiCG0WKOG3wDEg-_6mDqPaBg', {
+var bot = new Telegraf(botToken, {
   channelMode: true
 });
 
