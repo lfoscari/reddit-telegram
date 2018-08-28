@@ -1,13 +1,16 @@
 {
-  "name": "wtfstock",
+  "name": "reddit-telegram-heroku",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "nraw": "^0.2.5",
-    "telegraf": "^3.22.2"
-  },
   "scripts": {
-    "start": "node index"
+    "start": "node ."
   },
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-telegram-bot-api": "^0.30.0",
+    "nraw": "^0.2.5"
+  }
 }
