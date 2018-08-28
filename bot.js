@@ -14,7 +14,7 @@ const bot = new Telegram(token, {
 var count = 0;
 var date = new Date();
 
-console.log('bot server started...\n');
+console.log('bot server started\t' + currentTime());
 
 bot.on('message', function (msg) {
   setInterval(() => {
@@ -23,7 +23,7 @@ bot.on('message', function (msg) {
       console.log(count++ + "\t" + currentTime() + "\n" + data.title + " (" + data.author + ")\n" + data.url + "\n");
       bot.sendPhoto(msg.chat.id, data.url);
     });
-  }, 1000 * 60 * 1);
+  }, 1000 * 60 * 60 * 24);
 });
 
 function currentTime() {

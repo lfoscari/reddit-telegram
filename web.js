@@ -1,15 +1,17 @@
-var express = require('express');
-var packageInfo = require('./package.json');
+"use strict";
 
-var app = express();
+const express = require('express');
+const packageInfo = require('./package.json');
+
+const app = express();
 
 app.get('/', function (req, res) {
   res.json({ version: packageInfo.version });
 });
 
 var server = app.listen(3000, '127.0.0.1', function () {
-  var host = server.address().address;
-  var port = server.address().port;
+  const host = server.address().address;
+  const port = server.address().port;
 
-  console.log('Web server started at http://%s:%s', host, port);
+  console.log('Web server started at http://%s:%s\n', host, port);
 });
