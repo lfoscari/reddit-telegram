@@ -12,5 +12,11 @@
     "express": "^4.16.3",
     "node-telegram-bot-api": "^0.30.0",
     "nraw": "^0.2.5"
+  },
+  "scale": {
+    "sfo1": {
+      "min": 1,
+      "max": "auto"
+    }
   }
 }

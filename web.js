@@ -6,7 +6,7 @@ const packageInfo = require('./package.json');
 const app = express();
 
 app.get('/', function (req, res) {
-  res.json({ version: packageInfo.version });
+  res.send("wtfstockphotos");
 });
 
 var server = app.listen(3000, '127.0.0.1', function () {

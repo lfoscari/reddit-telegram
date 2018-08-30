@@ -14,16 +14,22 @@ const bot = new Telegram(token, {
 var count = 0;
 var date = new Date();
 
+var data, title, image, author;
+
 console.log('bot server started\t' + currentTime());
 
 bot.on('message', function (msg) {
   setInterval(() => {
     Reddit.subreddit("wtfstockphotos").random().exec(function (res) {
-      var data = res[0].data.children[0].data;
-      console.log(count++ + "\t" + currentTime() + "\n" + data.title + " (" + data.author + ")\n" + data.url + "\n");
-      bot.sendPhoto(msg.chat.id, data.url);
+      data = res[0].data.children[0].data;
+      title = data.title;
+      author = data.author;
+      image = data.url;
+
+      console.log(count++ + "\t" + currentTime() + "\n" + title + " (" + author + ")\n" + url + "\n");
+      bot.sendPhoto(msg.chat.id, image);
     });
-  }, 1000 * 60 * 60 * 24);
+  }, 1000 * 60 * 60 * 1);
 });
 
 function currentTime() {
