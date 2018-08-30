@@ -14,9 +14,9 @@
     "nraw": "^0.2.5"
   },
   "scale": {
-    "sfo1": {
+    "bru1": {
       "min": 1,
-      "max": "auto"
+      "max": 2
     }
   }
 }
