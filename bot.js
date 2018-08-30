@@ -29,7 +29,7 @@ bot.on('message', function (msg) {
       console.log(count++ + "\t" + currentTime() + "\n" + title + " (" + author + ")\n" + url + "\n");
       bot.sendPhoto(msg.chat.id, image);
     });
-  }, 1000 * 60 * 60 * 1);
+  }, 1000 * 60);
 });
 
 function currentTime() {
